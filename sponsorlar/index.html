@@ -1,0 +1,663 @@
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Sponsorlar | Boğaziçi Üniversitesi Teknoloji Zirvesi</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/icons/favicon.ico"/>
+    <link rel="canonical" href="https://bountechsummit.com/hakkımızda">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+    <style amp-custom>
+        /* BG */
+        html {
+            background: url(../assets/ts-back.jpg) fixed no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            position: relative;
+        }
+
+        html::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0.75;
+            background-color: #252525;
+            background-size: 100% 100%;
+        }
+
+        body{
+            font-family: Helvetica, sans-serif;
+        }
+
+        html, body { margin: 0; padding: 0; } body { min-height: 100vh; }
+
+        a,
+        a:hover,
+        a:visited {
+            text-decoration: none;
+        }
+
+        /* Clearfix */
+        /* Clearfix */
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+
+        * html .clearfix {
+            zoom: 1;
+        }
+
+        /* IE6 */
+
+        *:first-child+html .clearfix {
+            zoom: 1;
+        }
+
+        /* IE7 */
+
+        /* Toolbar */
+        .toolbar-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: var(--toolbar-height);
+            font-size: 1.3em;
+            background-color: rgb(255, 255, 255);
+            color: rgb(53, 52, 52);
+            z-index: 100;
+            padding: 0;
+        }
+
+        .menu-container {
+            display: flex;
+            justify-content: space-around;
+            align-content: flex-end;
+        }
+
+        .toolbar-icon {
+            display: none;
+        }
+
+        .menu-item-link {
+            width: 16%;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(58, 56, 56);
+            display: block;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+
+        .menu-item-text {
+            font-size: 0.4em;
+        }
+
+        .active {
+            color: rgb(29, 104, 96);
+            border-top: 3px solid rgb(40, 143, 134);
+        }
+
+        .disabled {
+            pointer-events: none;
+            cursor: default;
+            opacity: 0.5;
+        }
+
+        .ticket {
+            color: rgb(254, 73, 24);
+        }
+
+        @media screen and (min-width: 767px) {
+            .menu-container {
+                position: absolute;
+                width: 65%;
+                right: 4px;
+                bottom: 4px;
+            }
+            .menu-item-link {
+                padding: 4px 2px 4px 2px;
+            }
+            .toolbar-icon {
+                display: block;
+                position: absolute;
+                left: 30px;
+                bottom: 4px;
+            }
+
+            .toolbar-image {
+                max-width: 160px;
+            }
+
+            .toolbar-container {
+                top: 0;
+                bottom: auto;
+                height: auto;
+                font-size: 1.3em;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .toolbar-wrapper {
+                min-height: 70px;
+            }
+
+            .menu-item-text {
+                font-size: 0.9em;
+                color: white;
+            }
+
+            .toolbar-container i {
+                display: none;
+            }
+
+            .active {
+                border: none;
+            }
+
+            .ticket {
+                position: absolute;
+                right: 0px;
+                bottom: -35.25px;
+                background-color: rgb(254, 73, 24);
+                border-radius: 0 0 4px 4px;
+                padding: 4px 32px;
+                width: auto;
+            }
+
+            .ticket i {
+                display: inline;
+                color: white;
+            }
+
+            .ticket div {
+                display: inline;
+            }
+        }
+
+        @media screen and (min-width: 960px) {
+            .toolbar-wrapper {
+                position: relative;
+                width: 960px;
+                margin: auto;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .ticket {
+                right: -60px;
+            }
+        }
+
+        @media screen and (min-width: 1350px) {
+            .toolbar-wrapper {
+                width: 1200px;
+                min-height: 80px;
+            }
+
+            .menu-container {
+                width: 55%;
+            }
+        }
+
+
+        .container{
+            width: 80%;
+            margin: 30px 10% 80px 10%;
+            text-align: center;
+        }
+
+        .sponsors{
+            background-color: rgba(255, 255, 255, 1);
+            padding: 20px;
+            box-sizing: border-box;
+            border: 5px solid;
+            border-radius: 4px;
+            border-image: linear-gradient(to right, #ffc524 25%, #e5204f 25%,  #e5204f 50%,  #65ae5a 50%,  #65ae5a 75%, #0288d1 75%) 5;
+
+        }
+
+        .sponsors h2{
+            margin: 30px 0 20px 0;
+        }
+
+        .main-img-wrapper{
+            text-align: center;
+        }
+
+
+        .main-img-wrapper amp-img{
+            height: 80px;
+            width: 80%;
+            margin: 15px 10%;
+            position: relative;
+        }
+
+        .main-img-wrapper.long amp-img{
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            height: 90px;
+        }
+
+        .sponsors amp-img img{
+            object-fit: contain;
+        }
+
+        .gold-img-wrapper amp-img{
+            height: 60px;
+            width: 60%;
+            margin: 25px 20%;
+            position: relative;
+        }
+
+        .gold-img-wrapper.high amp-img{
+            height: 120px;
+        }
+
+        .gold-img-wrapper.long amp-img{
+            width: 84%;
+            margin-left: 8%;
+            margin-right: 8%;
+        }
+
+        .tech-img-wrapper amp-img{
+            height: 70px;
+            width: 70%;
+            margin: 20px 15%;
+            position: relative;
+        }
+
+        @media screen and (min-width: 767px){
+
+            .container{
+                width: 70%;
+                margin: 120px 15% 30px 15%;
+            }
+
+            .gold-img-wrapper{
+                float: left;
+                width: calc(100% / 3);
+            }
+
+            .gold-img-wrapper amp-img{
+                height: 80px;
+                width: 60%;
+                margin: 15px 20%;
+                position: relative;
+            }
+
+            .tech-img-wrapper{
+                float: left;
+                width: calc(100% / 4);
+            }
+
+            .tech-img-wrapper amp-img{
+                margin: 25px 25%;
+                height: 90px;
+            }
+        }
+
+        @media screen and (min-width: 1350px){
+
+            .container{
+                width: 1200px;
+                margin: 120px auto 30px auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
+        {
+          "vars" : {
+            "gtag_id": "UA-110752294-1",
+            "config" : {
+              "UA-110752294-1": { "groups": "default" }
+            }
+          }
+        }
+        </script>
+    </amp-analytics>
+    <div class="toolbar-container">
+        <div class="toolbar-wrapper">
+            <a href="/">
+                <div class="toolbar-icon">
+                    <amp-img class="toolbar-image" src="../assets/logo.png" alt="Boğaziçi Techsummit Icon" layout="fixed" width="160" height="60">
+                    </amp-img>
+                </div>
+            </a>
+                <div class="menu-container">
+                    <a href="/" class="menu-item-link">
+                        <i class="fas fa-home"></i>
+                        <div class="menu-item-text">Ana Sayfa</div>
+                    </a>
+                    <a href="/program" class="menu-item-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div class="menu-item-text">Program</div>
+                    </a>
+                    <a href="/sponsorlar" class="menu-item-link">
+                        <i class="fas fa-life-ring"></i>
+                        <div class="menu-item-text">Sponsorlar</div>
+                    </a>
+                    <a href="/hakkımızda" class="menu-item-link">
+                        <i class="fas fa-info"></i>
+                        <div class="menu-item-text">Hakkımızda</div>
+                    </a>
+                    <a href="/kayıt" class="ticket">
+                        <i class="fas fa-ticket-alt"></i>
+                        <div class="menu-item-text">Bilet Al</div>
+                    </a>
+                </div>
+        </div>
+
+    </div>
+
+    
+    <div class="container sponsors">
+        <h1>Sponsorlar</h1>
+        <div class="main-sponsor">
+            <h2>Ana Sponsor</h2>
+            <div class="main-img-wrapper">
+                <a href="https://www.ingbank.com.tr/en" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/ing-logo.png"></amp-img>
+                </a>
+            </div>
+        </div>
+        <h2>Altın Sponsorlar</h2>
+        <div class="gold-sponsor clearfix">
+            <div class="gold-img-wrapper">
+                <a href="https://www.sestek.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/site-logo-XL.png"></amp-img>
+                </a>
+            </div>
+            <div class="gold-img-wrapper long">
+                <a href="http://www.teknasyon.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/teknasyon.png"></amp-img>
+                </a>
+            </div>
+            <div class="gold-img-wrapper">
+                <a href="https://useinsider.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/Insider_logo.png"></amp-img>
+                </a>
+            </div>
+            <div class="gold-img-wrapper high">
+                <a href="https://www.getir.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/getir bi mutluluk.png"></amp-img>
+                </a>
+            </div>
+        </div>
+        <h2>Teknoloji Sponsorları</h2>
+        <div class="tech-sponsor clearfix">  
+            <div class="tech-img-wrapper">
+                <a href="http://www.hangaarlab.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/hangaarlab.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.pandorareality.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/pandora.jpg"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.promobot.com.tr/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/promobot.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="http://www.robtek.com.tr/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/robtek.jpg"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.techdroneleague.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/tdl.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.poligonmuhendislik.com" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/poligon.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.solvoyo.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/solvoyo.svg"></amp-img>
+                </a>
+            </div>
+        </div>
+        <h2>Canlı Yayın Sponsoru</h2>
+        <div class="main-sponsor">
+            <div class="main-img-wrapper">
+                <a href="http://www.webcastturkey.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/webcast.png"></amp-img>
+                </a>
+            </div>
+        </div>
+        <h2>Ödül Sponsorları</h2>
+        <div class="tech-sponsor clearfix">
+            <div class="tech-img-wrapper">
+                <a href="https://www.cybernova.com.tr/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/cybernova.png"></amp-img>
+                </a>
+            </div>
+        </div>
+        <h2>Medya Sponsorları</h2>
+        <div class="tech-sponsor clearfix">
+            <div class="tech-img-wrapper">
+                <a href="https://www.bilimsenligi.com/">
+                    <amp-img layout="fill" src="../assets/sponsors/bilimsenligi.com.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.youthall.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/youthall.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.webtekno.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/webtekno-logo.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.haberler.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/haberler_logo_vektor.svg"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.bundlehaber.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/bundle.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.instagram.com/zoneapptr/?hl=en" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/zone.jpg"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.tamindir.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/tamindir-logo.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="http://www.ceyrekmuhendis.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/ceyrekmuhendis.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://teknoliz.net/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/teknoliz.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://instagram.com/yazilimtoplulugu" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/yazilim_top.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://girisimciimuhendis.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/girisimci_muhendis.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://yazilimcigenclik.org/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/yg.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.instagram.com/kod_evreni/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/kodevreni logo.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.instagram.com/kod.efendi/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/kodadam.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.instagram.com/kodmuhendisi/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/kodmuhendisi.png"></amp-img>
+                </a>
+            </div>
+        </div>
+        <h2>Partner Kulüpler</h2>
+        <div class="tech-sponsor clearfix">
+            <div class="tech-img-wrapper">
+                <a href="http://koubitek.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/bitek_logo.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="http://www.iaubilisim.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/iau-bilisim.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.instagram.com/tukariyer/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/tu_kariyer.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.instagram.com/iauarge/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/argelogo.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.instagram.com/ieeebauwie/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/bauieeewie.jpg"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.instagram.com/btkiu/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/btk.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.gsuik.co/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/gsuik.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://hugip.com/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/hugipnewlogo.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.linkedin.com/company/ytuskylab" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/skylab.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="https://www.instagram.com/cecktu/" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/ktu.png"></amp-img>
+                </a>
+            </div>
+            <div class="tech-img-wrapper">
+                <a href="#" target="_blank">
+                    <amp-img layout="fill" src="../assets/sponsors/media/comp.png"></amp-img>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
