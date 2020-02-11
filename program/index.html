@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <title>Program | Boğaziçi Üniversitesi Teknoloji Zirvesi</title>
-    <link rel="shortcut icon" type="image/png" href="../assets/icons/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="../assets/icons/favicon.ico" />
     <meta name="description" content="Boğaziçi Üniversitesi Teknoloji Zirvesi 2019 Programı">
     <link rel="canonical" href="https://bountechsummit.com/hakkımızda">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
-          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
@@ -25,6 +25,7 @@
             from {
                 visibility: hidden
             }
+
             to {
                 visibility: visible
             }
@@ -34,6 +35,7 @@
             from {
                 visibility: hidden
             }
+
             to {
                 visibility: visible
             }
@@ -43,6 +45,7 @@
             from {
                 visibility: hidden
             }
+
             to {
                 visibility: visible
             }
@@ -52,6 +55,7 @@
             from {
                 visibility: hidden
             }
+
             to {
                 visibility: visible
             }
@@ -61,6 +65,7 @@
             from {
                 visibility: hidden
             }
+
             to {
                 visibility: visible
             }
@@ -79,13 +84,15 @@
     <style amp-custom>
         :root {
             --color-primary: #005AF0;
-            --space-1: .5rem;  /* 8px */
-            --space-4: 2rem;   /* 32px */
+            --space-1: .5rem;
+            /* 8px */
+            --space-4: 2rem;
+            /* 32px */
             --toolbar-height: 46px;
             --toolbar-height-desktop: 80px;
         }
 
-        body{
+        body {
             font-family: Helvetica, sans-serif;
         }
 
@@ -112,7 +119,15 @@
         /* IE7 */
 
 
-        html, body { margin: 0; padding: 0; } body { min-height: 100vh; }
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+        }
 
 
 
@@ -144,20 +159,20 @@
             text-decoration: none;
         }
 
-        .container{
+        .container {
             width: 96%;
             margin: 20px 2% var(--toolbar-height) 2%;
         }
 
-        @media screen and (min-width: 767px){
-            .container{
+        @media screen and (min-width: 767px) {
+            .container {
                 width: 90%;
                 margin: 100px 5% var(--toolbar-height) 5%;
             }
         }
 
-        @media screen and (min-width: 1200px){
-            .container{
+        @media screen and (min-width: 1200px) {
+            .container {
                 width: 1200px;
                 margin: 120px auto;
             }
@@ -165,10 +180,11 @@
 
         /* */
 
-        .program{
+        .program {
             color: white;
         }
-        .program .title-big{
+
+        .program .title-big {
             text-align: center;
             font-size: 2em;
         }
@@ -234,9 +250,11 @@
                 right: 4px;
                 bottom: 4px;
             }
+
             .menu-item-link {
                 padding: 4px 2px 4px 2px;
             }
+
             .toolbar-icon {
                 display: block;
                 position: absolute;
@@ -325,25 +343,30 @@
             display: flex;
             flex-wrap: wrap;
         }
+
         amp-selector[role=tablist].tabs-with-flex [role=tab] {
             flex-grow: 1;
             /* custom styling, feel free to change */
             text-align: center;
             padding: var(--space-1);
         }
+
         amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
             outline: none;
             /* custom styling, feel free to change */
             border-bottom: 2px solid var(--color-primary);
         }
+
         amp-selector[role=tablist].tabs-with-flex [role=tabpanel] {
             display: none;
             width: 100%;
-            order: 1; /* must be greater than the order of the tab buttons to flex to the next line */
+            order: 1;
+            /* must be greater than the order of the tab buttons to flex to the next line */
             /* custom styling, feel free to change */
             padding: var(--space-4);
         }
-        amp-selector[role=tablist].tabs-with-flex [role=tab][selected] + [role=tabpanel] {
+
+        amp-selector[role=tablist].tabs-with-flex [role=tab][selected]+[role=tabpanel] {
             display: block;
         }
 
@@ -351,35 +374,40 @@
         amp-selector[role=tablist].tabs-with-selector {
             display: flex;
         }
+
         amp-selector[role=tablist].tabs-with-selector [role=tab][selected] {
             outline: none;
         }
+
         amp-selector[role=tablist].tabs-with-selector {
             display: flex;
         }
+
         amp-selector[role=tablist].tabs-with-selector [role=tab] {
             /* custom styling, feel free to change */
             width: 100%;
             text-align: center;
             padding: var(--space-1);
         }
+
         amp-selector.tabpanels [role=tabpanel] {
             display: none;
             /* custom styling, feel free to change */
             padding: var(--space-4);
         }
+
         amp-selector.tabpanels [role=tabpanel][selected] {
             outline: none;
             display: block;
         }
 
         /* Tabs */
-        .tabs-container{
+        .tabs-container {
             display: flex;
             justify-content: space-around;
         }
 
-        .tabs-tab-item{
+        .tabs-tab-item {
             cursor: pointer;
             color: white;
             font-weight: bold;
@@ -388,13 +416,13 @@
             text-align: center;
         }
 
-        .tab-date{
+        .tab-date {
             font-weight: 400;
             font-size: 0.8em;
         }
-        
-        amp-selector[role=tablist].tabs-with-selector [role=tab][selected] .tabs-tab-item{
-            color: rgb(254, 73, 24);  
+
+        amp-selector[role=tablist].tabs-with-selector [role=tab][selected] .tabs-tab-item {
+            color: rgb(254, 73, 24);
             border-bottom: 2px solid rgb(254, 73, 24);
         }
 
@@ -418,7 +446,8 @@
         .gray-bg-transparent {
             background-color: rgba(6, 14, 87, 0.4);
         }
-        .item-container{
+
+        .item-container {
             width: 90%;
             margin: 12px 5%;
             color: white;
@@ -426,7 +455,7 @@
             border-radius: 4px;
         }
 
-        .visual-container{
+        .visual-container {
             float: left;
             width: 20%;
             margin-left: 5%;
@@ -437,76 +466,77 @@
             align-items: center;
         }
 
-        .visual{
+        .visual {
             width: inherit;
             object-fit: cover;
         }
 
-        .detail-container{
+        .detail-container {
             width: calc(90% - 48px);
             float: left;
         }
 
-        .title-container{
+        .title-container {
             font-size: 1.2em;
         }
 
-        .time-container{
+        .time-container {
             font-size: 0.8em;
             color: rgb(245, 234, 234);
         }
 
-        .speakers-list{
+        .speakers-list {
             list-style-type: none;
             padding-left: 6px;
         }
 
-        @media screen and (min-width: 767px){
-            .visual-container{
+        @media screen and (min-width: 767px) {
+            .visual-container {
                 width: 64px;
                 height: 64px;
             }
 
-            .detail-container{
+            .detail-container {
                 width: calc(90% - 64px);
             }
 
-            .title-container{
+            .title-container {
                 font-size: 1.4em;
             }
 
-            .time-container{
+            .time-container {
                 font-size: 1em;
             }
         }
 
         .tabpanels a {
-        font-weight: bold;
-        color: white;
+            font-weight: bold;
+            color: white;
         }
-
- 
     </style>
 </head>
 
 <body class="main-background">
     <amp-analytics type="gtag" data-credentials="include">
         <script type="application/json">
-        {
-          "vars" : {
-            "gtag_id": "UA-110752294-1",
-            "config" : {
-              "UA-110752294-1": { "groups": "default" }
+            {
+                "vars": {
+                    "gtag_id": "UA-110752294-1",
+                    "config": {
+                        "UA-110752294-1": {
+                            "groups": "default"
+                        }
+                    }
+                }
             }
-          }
-        }
         </script>
     </amp-analytics>
     <div class="toolbar-container">
         <div class="toolbar-wrapper">
             <a href="/">
                 <div class="toolbar-icon">
-                    <amp-img class="toolbar-image" src="../assets/logo.png" alt="Boğaziçi Techsummit Icon" layout="fixed" width="160" height="60">
+                    <amp-img class="toolbar-image" src="../assets/logo.png" alt="Boğaziçi Techsummit Icon"
+                        layout="fixed" width="160" height="60">
                     </amp-img>
                 </div>
             </a>
@@ -542,282 +572,291 @@
                 Program Akışı
             </h1>
             <div class="tabs">
-                <amp-selector class="tabs-with-selector"
-                              role="tablist"
-                              on="select:myTabPanels.toggle(index=event.targetOption, value=true)">
-                    <div id="sample3-tab1"
-                         role="tab"
-                         aria-controls="sample3-tabpanel1"
-                         option="0"
-                         selected>
-                            <div class="tabs-tab-item">
-                                1. Gün
-                                <br>
-                                <span class="tab-date">
-                                    28 Şubat Cuma
-                                </span>
-                            </div>
+                <amp-selector class="tabs-with-selector" role="tablist"
+                    on="select:myTabPanels.toggle(index=event.targetOption, value=true)">
+                    <div id="sample3-tab1" role="tab" aria-controls="sample3-tabpanel1" option="0" selected>
+                        <div class="tabs-tab-item">
+                            1. Gün
+                            <br>
+                            <span class="tab-date">
+                                28 Şubat Cuma
+                            </span>
+                        </div>
                     </div>
-                    <div id="sample3-tab2"
-                         role="tab"
-                         aria-controls="sample3-tabpanel2"
-                         option="1">
-                            <div class="tabs-tab-item">
-                                2. Gün
-                                <br>
-                                <span class="tab-date">
-                                    29 Şubat Cumartesi
-                                </span>
-                            </div>
+                    <div id="sample3-tab2" role="tab" aria-controls="sample3-tabpanel2" option="1">
+                        <div class="tabs-tab-item">
+                            2. Gün
+                            <br>
+                            <span class="tab-date">
+                                29 Şubat Cumartesi
+                            </span>
+                        </div>
                     </div>
-                    <div id="sample3-tab3"
-                         role="tab"
-                         aria-controls="sample3-tabpanel3"
-                         option="2">
-                            <div class="tabs-tab-item">
-                                3. Gün
-                                <br>
-                                <span class="tab-date">
-                                    1 Mart Pazar
-                                </span>
-                            </div>
+                    <div id="sample3-tab3" role="tab" aria-controls="sample3-tabpanel3" option="2">
+                        <div class="tabs-tab-item">
+                            3. Gün
+                            <br>
+                            <span class="tab-date">
+                                1 Mart Pazar
+                            </span>
+                        </div>
                     </div>
                 </amp-selector>
 
-                <amp-selector id="myTabPanels"
-                              class="tabpanels">
-                    <div id="sample3-tabpanel1"
-                         role="tabpanel"
-                         aria-labelledby="sample3-tab1"
-                         option
-                         selected>
-                            <div class="item-container clearfix blue-bg-transparent">
-                                <div class="visual-container">
-                                    <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/register.png" alt=""></amp-img></amp-img>
+                <amp-selector id="myTabPanels" class="tabpanels">
+                    <div id="sample3-tabpanel1" role="tabpanel" aria-labelledby="sample3-tab1" option selected>
+                        <div class="item-container clearfix blue-bg-transparent">
+                            <div class="visual-container">
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/register.png" alt=""></amp-img>
+                                </amp-img>
+                            </div>
+                            <div class="detail-container">
+                                <div class="time-container">
+                                    <i class="fa fa-clock-o"></i> 09:00 - 10:00
                                 </div>
-                                <div class="detail-container">
-                                    <div class="time-container">
-                                        <i class="fa fa-clock-o"></i> 09:00 - 10:00
-                                    </div>
-                                    <div class="title-container">
-                                        Kayıt
-                                    </div>
+                                <div class="title-container">
+                                    Kayıt
                                 </div>
                             </div>
-                            <div class="item-container clearfix blue-bg-transparent">
-                                <div class="visual-container">
-                                    <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img></amp-img>
+                        </div>
+                        <div class="item-container clearfix blue-bg-transparent">
+                            <div class="visual-container">
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                </amp-img>
+                            </div>
+                            <div class="detail-container">
+                                <div class="time-container">
+                                    <i class="fa fa-clock-o"></i> 10:00 - 10:10
                                 </div>
-                                <div class="detail-container">
-                                    <div class="time-container">
-                                        <i class="fa fa-clock-o"></i> 10:00 - 10:10
-                                    </div>
-                                    <div class="title-container">
-                                        Açılış Konuşması
-                                    </div>
+                                <div class="title-container">
+                                    Açılış Konuşması
                                 </div>
                             </div>
-                            <div class="item-container clearfix blue-bg-transparent">
-                                <div class="visual-container">
-                                    <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img></amp-img>
+                        </div>
+                        <div class="item-container clearfix blue-bg-transparent">
+                            <div class="visual-container">
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                </amp-img>
+                            </div>
+                            <div class="detail-container">
+                                <div class="time-container">
+                                    <i class="fa fa-clock-o"></i> 10:10 - 10:40
                                 </div>
-                                <div class="detail-container">
-                                    <div class="time-container">
-                                        <i class="fa fa-clock-o"></i> 10:10 - 10:40
-                                    </div>
-                                    <div class="title-container">
-                                         TBA
-                                    </div>
-                                    <div class="speakers-container">
-                                        <ul class="speakers-list">
-                                            <li>
-                                                <i class="fas fa-user"></i> Bahadır Şamlı -
-                                                EVP/CIO and Executive Committee Member,<span> ING </span>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class="title-container">
+                                    ING’de Yenilikçi Teknolojiler ve Gelecek
+                                </div>
+                                <div class="speakers-container">
+                                    <ul class="speakers-list">
+                                        <li>
+                                            <i class="fas fa-user"></i> Bahadır Şamlı -
+                                            EVP/CIO and Executive Committee Member,<span> ING </span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="item-container clearfix blue-bg-transparent">
-                                <div class="visual-container">
-                                    <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img></amp-img>
+                        </div>
+                        <div class="item-container clearfix blue-bg-transparent">
+                            <div class="visual-container">
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                </amp-img>
+                            </div>
+                            <div class="detail-container">
+                                <div class="time-container">
+                                    <i class="fa fa-clock-o"></i> 10:40 - 11:00
                                 </div>
-                                <div class="detail-container">
-                                    <div class="time-container">
-                                        <i class="fa fa-clock-o"></i> 10:40 - 11:00
-                                    </div>
-                                    <div class="title-container">
-                                        TBA
-                                    </div>
-                                    <div class="speakers-container">
-                                        <ul class="speakers-list">
-                                            <li>
-                                                <i class="fas fa-user"></i> Mehmet Ali Akarca -
-                                                CEO, <span> KoçSistem </span>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class="title-container">
+                                    Dijital Dünyada Kariyer Denklemi
+                                </div>
+                                <div class="speakers-container">
+                                    <ul class="speakers-list">
+                                        <li>
+                                            <i class="fas fa-user"></i> Mehmet Ali Akarca -
+                                            CEO, <span> KoçSistem </span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="item-container clearfix blue-bg-transparent">
-                                <div class="visual-container">
-                                    <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img></amp-img>
+                        </div>
+                        <div class="item-container clearfix blue-bg-transparent">
+                            <div class="visual-container">
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                </amp-img>
+                            </div>
+                            <div class="detail-container">
+                                <div class="time-container">
+                                    <i class="fa fa-clock-o"></i> 11:00 - 11:25
                                 </div>
-                                <div class="detail-container">
-                                    <div class="time-container">
-                                        <i class="fa fa-clock-o"></i> 11:00 - 11:25
-                                    </div>
-                                    <div class="title-container">
-                                        TBA
-                                    </div>
-                                    <div class="speakers-container">
-                                        <ul class="speakers-list">
-                                            <li>
-                                                <i class="fas fa-user"></i> TBA
-                                                <!-- CEO, <span> KoçSistem </span> -->
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class="title-container">
+                                    Creating a New Advertising Unit
+                                </div>
+                                <div class="speakers-container">
+                                    <ul class="speakers-list">
+                                        <li>
+                                            <i class="fas fa-user"></i> Ceren Çehreli
+
+                                            Director, Operations & Strategy, <span> Firefly </span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="item-container clearfix red-bg-transparent">
-                                <div class="visual-container">
-                                    <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/kahve.png" alt=""></amp-img></amp-img>
-                                </div>
-                                <div class="detail-container">
-                                    <div class="time-container">
-                                        <i class="fa fa-clock-o"></i> 11:25 - 11:45
-                                    </div>
-                                    <div class="title-container">
-                                        Kahve Molası
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-container clearfix blue-bg-transparent">
-                                <div class="visual-container">
-                                    <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img></amp-img>
-                                </div>
-                                <div class="detail-container">
-                                    <div class="time-container">
-                                        <i class="fa fa-clock-o"></i> 11:45 - 12:10
-                                    </div>
-                                    <div class="title-container">
-                                        TBA
-                                    </div>
-                                    <div class="speakers-container">
-                                        <ul class="speakers-list">
-                                            <li>
-                                                <i class="fas fa-user"></i> Ramazan Ayvaz -
-                                                Enterprise Solutions Architect, <span> Migros </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-container clearfix blue-bg-transparent">
-                                <div class="visual-container">
-                                    <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/panel.png" alt=""></amp-img></amp-img>
-                                </div>
-                                <div class="detail-container">
-                                    <div class="time-container">
-                                        <i class="fa fa-clock-o"></i> 12:10 - 12:50
-                                    </div>
-                                    <div class="title-container">
-                                        Yapay Zeka ile Büyüyen Startuplar
-                                    </div>
-                                    <div class="speakers-container">
-                                        <ul class="speakers-list">
-                                            <li>
-                                                <i class="fas fa-user"></i> <strong>Moderatör:</strong> Oğuzhan Aygören -
-                                                Dr. Öğr. Üyesi, <span> Boğaziçi Üniversitesi </span>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-user"></i> TBA
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-user"></i> TBA
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-user"></i> TBA
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-container clearfix red-bg-transparent">
-                                <div class="visual-container">
-                                    <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/yemek.png" alt=""></amp-img></amp-img>
-                                </div>
-                                <div class="detail-container">
-                                    <div class="time-container">
-                                        <i class="fa fa-clock-o"></i> 12:50 - 13:30
-                                    </div>
-                                    <div class="title-container">
-                                        Öğle Yemeği
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-container clearfix blue-bg-transparent">
-                                <div class="visual-container">
-                                    <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/megafon.png" alt=""></amp-img></amp-img>
-                                </div>
-                                <div class="detail-container">
-                                    <div class="time-container">
-                                        <i class="fa fa-clock-o"></i> 13:30 - 14:00
-                                    </div>
-                                    <div class="title-container">
-                                        Servislere Yerleşme
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-container clearfix blue-bg-transparent">
-                                <div class="visual-container">
-                                    <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/bus_transparent.png" alt=""></amp-img></amp-img>
-                                </div>
-                                <div class="detail-container">
-                                    <div class="time-container">
-                                        <i class="fa fa-clock-o"></i> 14:00
-                                    </div>
-                                    <div class="title-container">
-                                        Servis Kalkışı
-                                    </div>
-                                    <div class="speakers-container">
-                                        <ul class="speakers-list">
-                                            <li>
-                                                Servisler Boğaziçi Üniversitesi Güney Meydan'dan kalkacaktır.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-container clearfix orange-bg-transparent">
-                                <div class="visual-container">
-                                    <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/sirket.png" alt=""></amp-img></amp-img>
-                                </div>
-                                <div class="detail-container">
-                                    <div class="time-container">
-                                        <i class="fa fa-clock-o"></i> 14:30 - 16:30
-                                    </div>
-                                    <div class="title-container">
-                                        Şirket Gezileri
-                                    </div>
-                                    <div class="speakers-container">
-                                        <ul class="speakers-list">
-                                            <li>
-                                                IBM, Amazon Web Services, ING, Ford Otosan, Migros, Linktera, Vodafone, Insider, Getir, KoçSistem, Armut, LCW.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                    <div id="sample3-tabpanel2"
-                         role="tabpanel"
-                         aria-labelledby="sample3-tab2"
-                         option>
+                        </div>
                         <div class="item-container clearfix red-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/kahve.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/kahve.png" alt=""></amp-img>
+                                </amp-img>
+                            </div>
+                            <div class="detail-container">
+                                <div class="time-container">
+                                    <i class="fa fa-clock-o"></i> 11:25 - 11:45
+                                </div>
+                                <div class="title-container">
+                                    Kahve Molası
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-container clearfix blue-bg-transparent">
+                            <div class="visual-container">
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                </amp-img>
+                            </div>
+                            <div class="detail-container">
+                                <div class="time-container">
+                                    <i class="fa fa-clock-o"></i> 11:45 - 12:10
+                                </div>
+                                <div class="title-container">
+                                    Online Sipariş Teknolojileri
+                                </div>
+                                <div class="speakers-container">
+                                    <ul class="speakers-list">
+                                        <li>
+                                            <i class="fas fa-user"></i> Ramazan Ayvaz -
+                                            Enterprise Solutions Architect, <span> Migros </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-container clearfix blue-bg-transparent">
+                            <div class="visual-container">
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/panel.png" alt=""></amp-img>
+                                </amp-img>
+                            </div>
+                            <div class="detail-container">
+                                <div class="time-container">
+                                    <i class="fa fa-clock-o"></i> 12:10 - 12:50
+                                </div>
+                                <div class="title-container">
+                                    Yapay Zeka ile Büyüyen Startuplar
+                                </div>
+                                <div class="speakers-container">
+                                    <ul class="speakers-list">
+                                        <li>
+                                            <i class="fas fa-user"></i> <strong>Moderatör:</strong> Oğuzhan Aygören -
+                                            Dr. Öğr. Üyesi, <span> Boğaziçi Üniversitesi </span>
+                                        </li>
+                                       <li>
+                                            <i class="fas fa-user"></i><strong>Panelist:</strong> Ahmet Onur Durahim -
+                                            <span>Founder at PRINCIPAI, Asst. Prof. at Boğaziçi University</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-user"></i> TBA
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-user"></i> TBA
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-container clearfix red-bg-transparent">
+                            <div class="visual-container">
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/yemek.png" alt=""></amp-img>
+                                </amp-img>
+                            </div>
+                            <div class="detail-container">
+                                <div class="time-container">
+                                    <i class="fa fa-clock-o"></i> 12:50 - 13:30
+                                </div>
+                                <div class="title-container">
+                                    Öğle Yemeği
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-container clearfix blue-bg-transparent">
+                            <div class="visual-container">
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/megafon.png" alt=""></amp-img>
+                                </amp-img>
+                            </div>
+                            <div class="detail-container">
+                                <div class="time-container">
+                                    <i class="fa fa-clock-o"></i> 13:30 - 14:00
+                                </div>
+                                <div class="title-container">
+                                    Servislere Yerleşme
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-container clearfix blue-bg-transparent">
+                            <div class="visual-container">
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/bus_transparent.png" alt=""></amp-img>
+                                </amp-img>
+                            </div>
+                            <div class="detail-container">
+                                <div class="time-container">
+                                    <i class="fa fa-clock-o"></i> 14:00
+                                </div>
+                                <div class="title-container">
+                                    Servis Kalkışı
+                                </div>
+                                <div class="speakers-container">
+                                    <ul class="speakers-list">
+                                        <li>
+                                            Servisler Boğaziçi Üniversitesi Güney Meydan'dan kalkacaktır.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-container clearfix orange-bg-transparent">
+                            <div class="visual-container">
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/sirket.png" alt=""></amp-img>
+                                </amp-img>
+                            </div>
+                            <div class="detail-container">
+                                <div class="time-container">
+                                    <i class="fa fa-clock-o"></i> 14:30 - 16:30
+                                </div>
+                                <div class="title-container">
+                                    Şirket Gezileri
+                                </div>
+                                <div class="speakers-container">
+                                    <ul class="speakers-list">
+                                        <li>
+                                            IBM, Amazon Web Services, ING, Ford Otosan, Migros, Linktera, Vodafone,
+                                            Insider, Getir, KoçSistem, Armut, LCW.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sample3-tabpanel2" role="tabpanel" aria-labelledby="sample3-tab2" option>
+                        <div class="item-container clearfix red-bg-transparent">
+                            <div class="visual-container">
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/kahve.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -827,7 +866,7 @@
                                     Deneyim Alanı
                                 </div>
                                 <div class="speakers-container">
-                                    
+
                                     <ul class="speakers-list">
                                         <li>
                                             <i class="fas fa-star-of-life"></i> Teknolojik Ürünler
@@ -847,7 +886,7 @@
                                         <li>
                                             <i class="far fa-dot-circle"></i> İnsansı Robot
                                     </ul>
-                                     <!--
+                                    <!--
                                     <ul class="speakers-list">
                                         <li>
                                             <i class="fas fa-star-of-life"></i> Poligon Mühendislik (3D Printer)
@@ -888,38 +927,40 @@
                                             <i class="fas fa-star-of-life"></i> Şirket Standları
                                         </li>
                                     </ul>
-                                     <ul class="speakers-list">
+                                    <ul class="speakers-list">
                                         <li>
                                             <i class="far fa-dot-circle"></i> ING
                                         </li>
-                                    </ul> 
-                                     <ul class="speakers-list">
+                                    </ul>
+                                    <ul class="speakers-list">
                                         <li>
                                             <i class="far fa-dot-circle"></i> Amadeus
                                         </li>
-                                    </ul> 
-                                     <ul class="speakers-list">
+                                    </ul>
+                                    <ul class="speakers-list">
                                         <li>
                                             <i class="far fa-dot-circle"></i> Insider
                                         </li>
-                                    </ul> 
-                                     <ul class="speakers-list">
+                                    </ul>
+                                    <ul class="speakers-list">
                                         <li>
                                             <i class="far fa-dot-circle"></i> IBTech
                                         </li>
-                                    </ul> 
-                                     <ul class="speakers-list">
+                                    </ul>
+                                    <ul class="speakers-list">
                                         <li>
                                             <i class="far fa-dot-circle"></i> Linktera
                                         </li>
-                                    </ul> 
-                                    
+                                    </ul>
+
                                 </div>
                             </div>
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/register.png" alt=""></amp-img></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/register.png" alt=""></amp-img>
+                                </amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -932,20 +973,21 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
                                     <i class="fa fa-clock-o"></i> 10:00 - 10:25
                                 </div>
                                 <div class="title-container">
-                                    TBA
+                                    3 Boyutlu Baskı Teknolojileri ve Günümüz Dünyasından Örnekler
                                 </div>
                                 <div class="speakers-container">
                                     <ul class="speakers-list">
                                         <li>
-                                            <i class="fas fa-user"></i> TBA
-                                            <!--<span>Türkiye Emlak Katılım Bankası A.Ş.</span> -->
+                                            <i class="fas fa-user"></i> Oğuzhan Alpergin -
+                                            Sales Engineer,<span> Zaxe 3D Printing Technologies</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -953,7 +995,8 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -966,7 +1009,7 @@
                                     <ul class="speakers-list">
                                         <li>
                                             <i class="fas fa-user"></i> Dr. Yusuf Yeşil
-                                             <span>Yeşil Science</span> 
+                                            Founder,<span>Yeşil Science</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -974,7 +1017,8 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -986,8 +1030,9 @@
                                 <div class="speakers-container">
                                     <ul class="speakers-list">
                                         <li>
-                                            <i class="fas fa-user"></i> Ünal Sezer - 
-                                            Group Manager of Digital Banking Channels, <span> IBTech, QNB Finansbank </span>
+                                            <i class="fas fa-user"></i> Ünal Sezer -
+                                            Group Manager of Digital Banking Channels, <span> IBTech, QNB Finansbank
+                                            </span>
                                         </li>
                                     </ul>
                                 </div>
@@ -995,7 +1040,8 @@
                         </div>
                         <div class="item-container clearfix red-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/kahve.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/kahve.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1008,7 +1054,8 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1020,7 +1067,8 @@
                                 <div class="speakers-container">
                                     <ul class="speakers-list">
                                         <li>
-                                            <i class="fas fa-user"></i>  Eren Doğanay - RPA, CRM & Digital Transformation Manager,
+                                            <i class="fas fa-user"></i> Eren Doğanay - RPA, CRM & Digital Transformation
+                                            Manager,
                                             <span>Linktera</span>
                                         </li>
                                     </ul>
@@ -1029,7 +1077,8 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1041,7 +1090,8 @@
                                 <div class="speakers-container">
                                     <ul class="speakers-list">
                                         <li>
-                                            <i class="fas fa-user"></i> TBA <!-- Erol Beynam - VP of Engineering,
+                                            <i class="fas fa-user"></i> TBA
+                                            <!-- Erol Beynam - VP of Engineering,
                                             <span>Solvoyo</span> -->
                                         </li>
                                     </ul>
@@ -1050,7 +1100,8 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1062,7 +1113,8 @@
                                 <div class="speakers-container">
                                     <ul class="speakers-list">
                                         <li>
-                                            <i class="fas fa-user"></i>  Cihat Kahraman - Co-Founder & CEO, <span>VSight</span> 
+                                            <i class="fas fa-user"></i> Cihat Kahraman - Co-Founder & CEO,
+                                            <span>VSight</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -1070,7 +1122,8 @@
                         </div>
                         <div class="item-container clearfix red-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/yemek.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/yemek.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1083,7 +1136,8 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1095,7 +1149,8 @@
                                 <div class="speakers-container">
                                     <ul class="speakers-list">
                                         <li>
-                                            <i class="fas fa-user"></i> TBA <!-- Çağatay YURDASAL - ND PMO Ekip Lideri, -->
+                                            <i class="fas fa-user"></i> TBA
+                                            <!-- Çağatay YURDASAL - ND PMO Ekip Lideri, -->
                                             <span> Amadeus</span>
                                         </li>
                                     </ul>
@@ -1104,7 +1159,8 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1116,7 +1172,7 @@
                                 <div class="speakers-container">
                                     <ul class="speakers-list">
                                         <li>
-                                            <i class="fas fa-user"></i> Alper Tekeli - Senior Manager, 
+                                            <i class="fas fa-user"></i> Alper Tekeli - Senior Manager,
                                             <span>Ford Otosan</span>
                                         </li>
                                     </ul>
@@ -1125,7 +1181,8 @@
                         </div>
                         <div class="item-container clearfix red-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/kahve.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/kahve.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1138,11 +1195,12 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/panel.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/panel.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
-                                    <i class="fa fa-clock-o"></i> 14:25 - 15:10 
+                                    <i class="fa fa-clock-o"></i> 14:25 - 15:10
                                 </div>
                                 <div class="title-container">
                                     Geleceğin İş Dünyası
@@ -1151,22 +1209,24 @@
                                     <ul class="speakers-list">
                                         <li>
                                             <i class="fas fa-user"></i> <strong>Moderatör:</strong> Dr. Sertaç Doğanay -
-                                            Teknoloji İletişimcisi <!-- <span>OptiWisdom şirketinde Founder&CEO</span> -->
+                                            Teknoloji İletişimcisi
+                                            <!-- <span>OptiWisdom şirketinde Founder&CEO</span> -->
                                         </li>
                                         <li>
-                                            <i class="fas fa-user"></i><strong>Panelist:</strong>  Dr. Şebnem Özdemir -
-                                            <span>İstinye Üniversitesi Yönetim Bilişim Sistemleri Bölüm Başkanı</span> 
+                                            <i class="fas fa-user"></i><strong>Panelist:</strong> Dr. Şebnem Özdemir -
+                                            <span>İstinye Üniversitesi Yönetim Bilişim Sistemleri Bölüm Başkanı</span>
                                         </li>
                                         <li>
-                                            <i class="fas fa-user"></i> Panelist:  Cengiz Ferhat Altay -
-                                            <span>Halen Mizah Atölyesi kurucu &amp; eğitmeni</span> 
+                                            <i class="fas fa-user"></i> Panelist: Cengiz Ferhat Altay -
+                                            <span>Halen Mizah Atölyesi kurucu &amp; eğitmeni</span>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="item-container clearfix red-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/kahve.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/kahve.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1179,17 +1239,19 @@
                         </div>
                         <div class="item-container clearfix green-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
                                     <i class="fa fa-clock-o"></i> 15:30 - 17:30
                                 </div>
                                 <div class="title-container">
-                                   Workshoplar (x4)
+                                    Workshoplar (x4)
                                 </div>
                             </div>
-                        </div> <!--
+                        </div>
+                        <!--
                         <div class="item-container clearfix green-bg-transparent">
                             <div class="visual-container">
                                 <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
@@ -1294,14 +1356,12 @@
                                 </div>
                             </div>
                         </div> -->
-                    </div> 
-                    <div id="sample3-tabpanel3"
-                         role="tabpanel"
-                         aria-labelledby="sample3-tab3"
-                         option>
+                    </div>
+                    <div id="sample3-tabpanel3" role="tabpanel" aria-labelledby="sample3-tab3" option>
                         <div class="item-container clearfix red-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/kahve.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/kahve.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1316,7 +1376,7 @@
                                             <i class="fas fa-star-of-life"></i> Teknolojik Ürünler
                                         </li>
                                     </ul>
-                                         
+
                                     <ul class="speakers-list">
                                         <li>
                                             <i class="far fa-dot-circle"></i> Endüstriyel Robotlar
@@ -1330,7 +1390,8 @@
                                     <ul class="speakers-list">
                                         <li>
                                             <i class="far fa-dot-circle"></i> İnsansı Robot
-                                    </ul> <!--
+                                    </ul>
+                                    <!--
                                     <ul class="speakers-list">
                                         <li>
                                             <i class="fas fa-star-of-life"></i> TechDroneLeague (Drone Technologies)
@@ -1360,39 +1421,41 @@
                                         <li>
                                             <i class="fas fa-star-of-life"></i> Şirket Standları
                                         </li>
-                                    </ul> 
-                                     
-                                     <ul class="speakers-list">
+                                    </ul>
+
+                                    <ul class="speakers-list">
                                         <li>
                                             <i class="far fa-dot-circle"></i> ING
                                         </li>
-                                    </ul> 
-                                     <ul class="speakers-list">
+                                    </ul>
+                                    <ul class="speakers-list">
                                         <li>
                                             <i class="far fa-dot-circle"></i> Amadeus
                                         </li>
-                                    </ul> 
-                                     <ul class="speakers-list">
+                                    </ul>
+                                    <ul class="speakers-list">
                                         <li>
                                             <i class="far fa-dot-circle"></i> Insider
                                         </li>
-                                    </ul> 
-                                     <ul class="speakers-list">
+                                    </ul>
+                                    <ul class="speakers-list">
                                         <li>
                                             <i class="far fa-dot-circle"></i> IBTech
                                         </li>
-                                    </ul> 
-                                     <ul class="speakers-list">
+                                    </ul>
+                                    <ul class="speakers-list">
                                         <li>
                                             <i class="far fa-dot-circle"></i> Linktera
                                         </li>
-                                    </ul> 
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/register.png" alt=""></amp-img></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/register.png" alt=""></amp-img>
+                                </amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1405,7 +1468,8 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1426,7 +1490,8 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1438,7 +1503,7 @@
                                 <div class="speakers-container">
                                     <ul class="speakers-list">
                                         <li>
-                                            <i class="fas fa-user"></i> Kadir Kırmızı - 
+                                            <i class="fas fa-user"></i> Dr. Kadir Kırmızı -
                                             CEO, <span>Turna.com</span>
                                         </li>
                                     </ul>
@@ -1447,7 +1512,8 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1459,7 +1525,8 @@
                                 <div class="speakers-container">
                                     <ul class="speakers-list">
                                         <li>
-                                            <i class="fas fa-user"></i> TBA <!-- Ünal Sezer - 
+                                            <i class="fas fa-user"></i> TBA
+                                            <!-- Ünal Sezer - 
                                             Group Manager of Digital Banking Channels,--> <span> B/S/H/ </span>
                                         </li>
                                     </ul>
@@ -1468,7 +1535,8 @@
                         </div>
                         <div class="item-container clearfix red-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/kahve.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/kahve.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1481,19 +1549,20 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
                                     <i class="fa fa-clock-o"></i> 11:30 - 11:55
                                 </div>
                                 <div class="title-container">
-                                    TBA
+                                    Yapay Zeka E-Ticareti Nasıl Değiştiriyor?
                                 </div>
                                 <div class="speakers-container">
                                     <ul class="speakers-list">
                                         <li>
-                                            <i class="fas fa-user"></i> Çağlar İçer - Head of Predictive Business Unit, 
+                                            <i class="fas fa-user"></i> Çağlar İçer - Head of Predictive Business Unit,
                                             <span>Insider</span>
                                         </li>
                                     </ul>
@@ -1502,7 +1571,8 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1514,8 +1584,8 @@
                                 <div class="speakers-container">
                                     <ul class="speakers-list">
                                         <li>
-                                            <i class="fas fa-user"></i> İlhan Yılmaz - 
-                                            CEO, <span>Monster Notebook</span> 
+                                            <i class="fas fa-user"></i> İlhan Yılmaz -
+                                            CEO, <span>Monster Notebook</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -1523,7 +1593,8 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1535,15 +1606,16 @@
                                 <div class="speakers-container">
                                     <ul class="speakers-list">
                                         <li>
-                                            <i class="fas fa-user"></i> Tba Tech Drone League <!-- Cihat Kahraman - Co founder, <span>HangaarLab</span> -->
-                                        </li>
+                                            <i class="fas fa-user"></i> Can Tayfun -
+                                              Co founder, <span>Tech Drone League</span>                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="item-container clearfix red-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/yemek.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/yemek.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1556,7 +1628,8 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1568,7 +1641,8 @@
                                 <div class="speakers-container">
                                     <ul class="speakers-list">
                                         <li>
-                                            <i class="fas fa-user"></i> TBA <!-- Çağatay YURDASAL - ND PMO Ekip Lideri, 
+                                            <i class="fas fa-user"></i> TBA
+                                            <!-- Çağatay YURDASAL - ND PMO Ekip Lideri, 
                                             <span>Amadeus</span> -->
                                         </li>
                                     </ul>
@@ -1577,7 +1651,8 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1589,7 +1664,8 @@
                                 <div class="speakers-container">
                                     <ul class="speakers-list">
                                         <li>
-                                            <i class="fas fa-user"></i> TBA <!-- Fatih Üstündağ - CTO, -->
+                                            <i class="fas fa-user"></i> TBA
+                                            <!-- Fatih Üstündağ - CTO, -->
                                             <span>SNI</span>
                                         </li>
                                     </ul>
@@ -1598,7 +1674,8 @@
                         </div>
                         <div class="item-container clearfix red-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/kahve.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/kahve.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1611,7 +1688,8 @@
                         </div>
                         <div class="item-container clearfix blue-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/panel.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/panel.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1623,16 +1701,16 @@
                                 <div class="speakers-container">
                                     <ul class="speakers-list">
                                         <li>
-                                            <i class="fas fa-user"></i> <strong>Moderatör:</strong> IoT Türkiye
-                                            <!-- <span>OptiWisdom şirketinde Founder&CEO</span> -->
+                                            <i class="fas fa-user"></i> <strong>Moderatör:</strong> Can Güleren -
+                                            <span> IoT Türkiye, Kurucu</span>
                                         </li>
                                         <li>
-                                            <i class="fas fa-user"></i> TBA <!-- Zekeriya Beşiroğlu -
-                                            <span>Lead Architect, Big Data & Analytics at KOMTAŞ Bilgi Yönetimi</span> -->
+                                            <i class="fas fa-user"></i> Ayhan Ak -
+                                            <span>Arçelik, IoT Program Yönetim Lideri</span>
                                         </li>
                                         <li>
-                                            <i class="fas fa-user"></i> TBA <!-- Batuhan Köse -
-                                            <span>Data Analyst at Turkcell</span> -->
+                                            <i class="fas fa-user"></i> Batuhan Köse -
+                                            <span> Turkcell, IoT Ürün ve Çözümler Yönetimi Müdürü</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -1640,7 +1718,8 @@
                         </div>
                         <div class="item-container clearfix red-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/kahve.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/kahve.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
@@ -1653,17 +1732,19 @@
                         </div>
                         <div class="item-container clearfix green-bg-transparent">
                             <div class="visual-container">
-                                <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
+                                <amp-img layout="responsive" width="1" height="1" class="visual"
+                                    src="../assets/visuals/speaker.png" alt=""></amp-img>
                             </div>
                             <div class="detail-container">
                                 <div class="time-container">
                                     <i class="fa fa-clock-o"></i> 15:30 - 17:30
                                 </div>
                                 <div class="title-container">
-                                   Workshoplar (x4)
+                                    Workshoplar (x4)
                                 </div>
                             </div>
-                        </div> <!--
+                        </div>
+                        <!--
                         <div class="item-container clearfix green-bg-transparent">
                             <div class="visual-container">
                                 <amp-img layout="responsive" width="1" height="1" class="visual" src="../assets/visuals/speaker.png" alt=""></amp-img>
@@ -1749,17 +1830,19 @@
             </div>
         </div>
     </div>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/5d17819f7a48df6da2422b33/1e07hd1mm';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5d17819f7a48df6da2422b33/1e07hd1mm';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
     </script>
     <!--End of Tawk.to Script-->
 </body>
