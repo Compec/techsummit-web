@@ -4,26 +4,38 @@ document.querySelector("#year").innerText = new Date().getFullYear()
 // Auto-fill & GS integration START
 const API_KEY = "AIzaSyATnlWZtGiZ8TbWOCCkFY5LeSC_FYlOOLY"
 const SPREADSHEET_ID = "1RLYg8Z5GLMANyw9oJ6XBUEcT3j4Chr4mFU0RhPGD1S0"
-const DATA_RANGE = "B5:F"
+const DATA_RANGE = "B5:H"
 function getSheetValues() {
 	gapi.client.init({
         "apiKey": API_KEY,
-		"discoveryDocs": ["https://sheets.googleapis.com/$discovery/rest?version=v4"]
+		    "discoveryDocs": ["https://sheets.googleapis.com/$discovery/rest?version=v4"]
     }).then(() => {
 		return gapi.client.sheets.spreadsheets.values.get({
 			spreadsheetId: SPREADSHEET_ID,
 			range: DATA_RANGE
 		})
 	}).then((response) => {
-		let loadedData = response.result.values
+		    let loadedData = response.result.values
         let el2Fill = document.querySelectorAll(".event-details")
         for (let i=0; i<loadedData.length; i++) {
-            el2Fill[loadedData[i][4] - 1].innerHTML += `<li>                                    
-                                    <span class="event-time">${loadedData[i][3]}</span> - <span>${loadedData[i][1]} (${loadedData[i][0]})</span>
+            let el2Append = document.createElement("li")
+            el2Append.innerHTML = ` 
+                                  <a data-bs-toggle="modal" data-bs-target="#modal" data-modal-id="${i}">                             
+                                    <span class="event-time">${loadedData[i][5].slice(0,5)}</span> - <span>${loadedData[i][3]} (${loadedData[i][0]})</span>
                                     <br>
-                                    <span class="event-location">${loadedData[i][2]}</span>
-                                </li>
-                                `
+                                    <span class="event-location">${loadedData[i][4]}</span>
+                                  </a>
+                                  `
+            el2Append.addEventListener("click", function() {
+              let modal = document.querySelector("#modal .modal-body")
+              let modal_id = this.querySelector("a").getAttribute("data-modal-id")
+              modal.querySelectorAll("p")[0].innerText = loadedData[modal_id][5] + " | " + loadedData[modal_id][4]
+              modal.querySelector("img").src = loadedData[modal_id][2] ? loadedData[modal_id][2] : "assets/img/default.png"
+              modal.querySelector("h4").innerText = loadedData[modal_id][0]
+              modal.querySelectorAll("p")[1].innerText = loadedData[modal_id][3]
+              modal.querySelectorAll("p")[2].innerText = loadedData[modal_id][1]
+            })
+            el2Fill[loadedData[i][6] - 1].appendChild(el2Append)
         }
 	})
 }
