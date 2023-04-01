@@ -14,6 +14,23 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="navbar" tabindex="0">
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Etkinlik Ayrıntıları</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-sm-center"><img class="rounded-circle mb-3 fit-cover" width="130" height="130" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
+                    <div>
+                        <p style="margin-left: 16px;margin-bottom: 2px;margin-top: 4px;color: var(--bs-blue);font-weight: bold;font-size: 12px;">Saat Aralığı | Yer</p>
+                        <h4 style="margin-left: 16px;margin-bottom: 2px;">Konuşmacı adı</h4>
+                        <p style="margin-left: 16px;margin-bottom: 6px;">Konuşma tanıtımı</p>
+                        <p style="margin-left: 16px;font-size: 12px;">Şirket adresi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Start: Navbar Right Links (Dark) -->
     <nav class="navbar navbar-dark navbar-expand-md sticky-top py-3" id="navbar" style="border-style: none;border-color: #0011a9;background: rgb(10, 4, 98);--bs-primary: #0f069a;--bs-primary-rgb: 15,6,154;" data-bs-target="#navbar">
         <div class="container-fluid">
@@ -36,23 +53,24 @@
                 <div data-aos="fade" data-aos-duration="750" data-aos-once="true">
                     <h2 class="fw-bold">Teknolojiyle</h2>
                     <h2 class="fw-bold" style="margin-top: -9px;color: #130fd5;">#YenidenTanış</h2>
-                    <p class="my-3">Tincidunt laoreet leo, adipiscing taciti tempor. Primis senectus sapien, risus donec ad fusce augue interdum.</p><a class="btn btn-primary btn-lg me-2" role="button" href="#" style="background: #171087;--bs-primary: #171087;--bs-primary-rgb: 23,16,135;">Yerini ayırt!</a>
+                    <p class="my-3">Boğaziçi Üniversitesi Bilişim Kulübü – Compec tarafından 14. kez 29 - 30 Nisan tarihlerinde gerçekleşecek Boğaziçi TechSummit; bu sene de teknolojinin farklı disiplinlerinde uzmanlaşmış isimlere, teknoloji sektörün öncüsü şirketlere ve girişimlere ev sahipliği yapacak.</p>
+                    <a class="btn btn-primary btn-lg me-2" role="button" href="https://biletino.com/e-m7y" style="background: #171087;--bs-primary: #171087;--bs-primary-rgb: 23,16,135;">Yerini ayırt!</a>
                 </div>
             </div>
         </div>
     </section><!-- End: Hero -->
     <ul id="schedule" data-bs-target="#navbar">
-        <li data-aos="slide-right" data-aos-once="true" class="date"><h3>1. Gün</h3><p>21 Nisan, Cuma</p></li>
+        <li data-aos="slide-right" data-aos-once="true" class="date"><h3>1. Gün</h3><p>29 Nisan, Cumartesi</p></li>
         <li class="events"><ul class="event-details"></ul></li>
-        <li data-aos="slide-right" data-aos-once="true" class="date"><h3>2. Gün</h3><p>22 Nisan, Cumartesi</p></li>
+        <li data-aos="slide-right" data-aos-once="true" class="date"><h3>2. Gün</h3><p>30 Nisan, Pazar</p></li>
         <li class="events cf"><ul class="event-details"></ul></li>
-    </ul><!-- Start: Team -->
+    </ul>
+    <!-- Start: Team -->
     <section id="contact" class="py-4 py-xl-5" data-bs-target="#navbar">
-        <div class="row g-0 mb-4 mb-lg-5" data-aos="fade" data-aos-once="true">
+        <!--<div class="row g-0 mb-4 mb-lg-5" data-aos="fade" data-aos-once="true">
             <div class="col-md-8 col-xl-6 text-center mx-auto">
-                <h2>Ekibimiz</h2>
-                <p>Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis nostra nunc. Vestibulum dui eget ultrices.</p>
-            </div>
+                <h2>Bize Ulaşın</h2>
+            </div>-->
         </div>
         <div class="row gy-4 row-cols-2 row-cols-md-4 mx-auto" data-aos="zoom-in-up" data-aos-once="true" style="max-width: 985px;">
             <div class="col">
@@ -62,13 +80,10 @@
                         <p class="text-muted card-text mb-2">TechSummit Proje Direktörü</p>
                         <ul class="list-inline fs-6 text-muted w-100 mb-0" style="margin-top: -8px;">
                             <li class="list-inline-item text-center">
-                                <div class="d-flex flex-column align-items-center"></div>
-                            </li>
-                            <li class="list-inline-item text-center">
-                                <div class="d-flex flex-column align-items-center"><i class="icon ion-android-mail" onclick="window.open(&quot;mailto:yaman.sivrikaya@compec.org&quot;, &quot;_blank&quot;)" style="cursor: pointer;"></i></div>
-                            </li>
-                            <li class="list-inline-item text-center">
-                                <div class="d-flex flex-column align-items-center"></div>
+                                <div class="d-flex flex-row align-items-center">
+                                    <i class="icon ion-social-linkedin" onclick="window.open(&quot;https://www.linkedin.com/in/tariktalhadinc/&quot;, &quot;_blank&quot;)" style="cursor: pointer;"></i>
+                                    <i class="icon ion-social-instagram" onclick="window.open(&quot;https://instagram.com/tariktalhadinc&quot;, &quot;_blank&quot;)" style="cursor: pointer;"></i>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -81,7 +96,10 @@
                         <p class="text-muted card-text mb-2">TechSummit Proje Lideri</p>
                         <ul class="list-inline fs-6 text-muted w-100 mb-0" style="margin-top: -8px;">
                             <li class="list-inline-item text-center">
-                                <div class="d-flex flex-column align-items-center"><i class="icon ion-android-mail" onclick="window.open(&quot;mailto:esra.can@leader.compec.org&quot;, &quot;_blank&quot;)" style="cursor: pointer;"></i></div>
+                                <div class="d-flex flex-row align-items-center">
+                                    <i class="icon ion-social-linkedin" onclick="window.open(&quot;https://www.linkedin.com/in/sedanur-ayhan-4471b21b4&quot;, &quot;_blank&quot;)" style="cursor: pointer;"></i>
+                                    <i class="icon ion-android-mail" onclick="window.open(&quot;mailto:sedanur.ayhan@leader.compec.org&quot;, &quot;_blank&quot;)" style="cursor: pointer;"></i>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -94,13 +112,10 @@
                         <p class="text-muted card-text mb-2">TechSummit Proje Lideri</p>
                         <ul class="list-inline fs-6 text-muted w-100 mb-0" style="margin-top: -8px;">
                             <li class="list-inline-item text-center">
-                                <div class="d-flex flex-column align-items-center"></div>
-                            </li>
-                            <li class="list-inline-item text-center">
-                                <div class="d-flex flex-column align-items-center"><i class="icon ion-android-mail" onclick="window.open(&quot;mailto:beyza.deniz@leader.compec.org&quot;, &quot;_blank&quot;)" style="cursor: pointer;"></i></div>
-                            </li>
-                            <li class="list-inline-item text-center">
-                                <div class="d-flex flex-column align-items-center"></div>
+                                <div class="d-flex flex-row align-items-center">
+                                    <i class="icon ion-social-linkedin" onclick="window.open(&quot;https://www.linkedin.com/in/seda-uysal-382712228&quot;, &quot;_blank&quot;)" style="cursor: pointer;"></i>
+                                    <i class="icon ion-android-mail" onclick="window.open(&quot;mailto:seda.uysal@leader.compec.org&quot;, &quot;_blank&quot;)" style="cursor: pointer;"></i>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -113,13 +128,10 @@
                         <p class="text-muted card-text mb-2">TechSummit Proje Lideri</p>
                         <ul class="list-inline fs-6 text-muted w-100 mb-0" style="margin-top: -8px;">
                             <li class="list-inline-item text-center">
-                                <div class="d-flex flex-column align-items-center"></div>
-                            </li>
-                            <li class="list-inline-item text-center">
-                                <div class="d-flex flex-column align-items-center"><i class="icon ion-android-mail" onclick="window.open(&quot;mailto:zeynep.arikan@leader.compec.org&quot;, &quot;_blank&quot;)"></i></div>
-                            </li>
-                            <li class="list-inline-item text-center">
-                                <div class="d-flex flex-column align-items-center"></div>
+                                <div class="d-flex flex-row align-items-center">
+                                    <i class="icon ion-social-linkedin" onclick="window.open(&quot;https://www.linkedin.com/in/beg%C3%BCm-g%C3%B6kmen-64a330227&quot;, &quot;_blank&quot;)"></i>
+                                    <i class="icon ion-android-mail" onclick="window.open(&quot;mailto:begum.gokmen@leader.compec.org&quot;, &quot;_blank&quot;)"></i>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -135,6 +147,7 @@
     </footer><!-- End: Footer Dark -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://apis.google.com/js/api.js"></script>
 	<script src="https://accounts.google.com/gsi/client"></script>
