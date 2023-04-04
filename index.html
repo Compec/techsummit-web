@@ -14,34 +14,18 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="navbar" tabindex="0">
-    <div class="modal fade" role="dialog" tabindex="-1" id="modal">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Etkinlik Ayrıntıları</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-sm-center"><img class="rounded-circle mb-3 fit-cover" width="130" height="130" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                    <div>
-                        <p style="margin-left: 16px;margin-bottom: 2px;margin-top: 4px;color: var(--bs-blue);font-weight: bold;font-size: 12px;">Saat Aralığı | Yer</p>
-                        <h4 style="margin-left: 16px;margin-bottom: 2px;">Konuşmacı adı</h4>
-                        <p style="margin-left: 16px;margin-bottom: 6px;">Konuşma tanıtımı</p>
-                        <p style="margin-left: 16px;font-size: 12px;">Şirket adresi</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Start: Navbar Right Links (Dark) -->
     <nav class="navbar navbar-dark navbar-expand-md sticky-top py-3" id="navbar" style="border-style: none;border-color: #0011a9;background: rgb(10, 4, 98);--bs-primary: #0f069a;--bs-primary-rgb: 15,6,154;" data-bs-target="#navbar">
         <div class="container-fluid">
             <!-- Start: Navbar Brand -->
-                <img src="assets/img/tslogofullwhite.png" style="margin: 5px;margin-top: 0;margin-right: 0;margin-bottom: 3px;margin-left: 12px;padding-bottom: 8px;" width="110px" tabindex="0" data-bs-html="true" data-bs-content="<a href='https://www.linkedin.com/in/bountechsummit' target='_blank'><i class='icon ion-social-linkedin fs-4'></i></a><a href='https://instagram.com/bountechsummit' target='_blank'><i class='icon ion-social-instagram fs-4'></i></a>" data-bs-offset="3px,15px" data-bs-toggle="popover" data-bs-trigger="focus">
+                <img src="assets/img/tslogofullwhite.png" style="margin: 5px;margin-top: 0;margin-right: 0;margin-bottom: 3px;margin-left: 12px;padding-bottom: 8px;" width="110px">
             <!-- End: Navbar Brand -->
             <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-5" style="border-style: none;margin: 10px;">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active text-uppercase fw-bold" href="#attend" data-bs-target="#attend">KAYIT</a></li>
                     <li class="nav-item text-uppercase fw-bold"><a class="nav-link text-uppercase fw-bold" data-bs-target="#schedule" href="#schedule">TAKVİM</a></li>
+                    <li class="nav-item text-uppercase fw-bold"><a class="nav-link text-uppercase fw-bold" data-bs-target="#sponsors" href="#sponsors">SPONSORLAR</a></li>
                     <li class="nav-item text-uppercase fw-bold"><a class="nav-link text-uppercase fw-bold" href="#contact" data-bs-target="#contact">İLETİŞİM</a></li>
                 </ul>
             </div>
@@ -57,7 +41,6 @@
                     <h2 class="fw-bold">Teknolojiyle</h2>
                     <h2 class="fw-bold" style="margin-top: -9px;color: #130fd5;">#YenidenTanış</h2>
                     <p class="my-3 smallText">Boğaziçi TechSummit; bu sene de teknolojinin farklı disiplinlerinde uzmanlaşmış isimlere, teknoloji sektörün öncüsü şirketlere ve girişimlere ev sahipliği yapacak.</p>
-                    <p class="smallText"><i class="icon ion-plus"></i> Fuaye alanı tüm gün açık olacaktır.</p>
                     <a class="btn btn-primary btn-lg me-2 smallText" role="button" href="https://biletino.com/e-m7y" target="_blank" style="background: #171087;--bs-primary: #171087;--bs-primary-rgb: 23,16,135;">Yerini ayırt!</a>
                 </div>
             </div>
@@ -69,14 +52,26 @@
         <li data-aos="slide-right" data-aos-once="true" class="date"><h3><b>2. Gün</b></h3><p>30 Nisan, Pazar</p></li>
         <li class="events cf"><ul class="event-details"></ul></li>
     </ul>
-    <!-- Start: Team -->
-    <section id="contact" class="py-4 py-xl-5" data-bs-target="#navbar">
-        <!--<div class="row g-0 mb-4 mb-lg-5" data-aos="fade" data-aos-once="true">
-            <div class="col-md-8 col-xl-6 text-center mx-auto">
-                <h2>Bize Ulaşın</h2>
-            </div>-->
+    <p style="font-size: 120%; text-align: center; margin-top: 5px"><i class="icon ion-plus"></i> Deneyim alanlarının ve şirket stantlarının bulunduğu fuaye alanımız gün boyu açık olacaktır.</p>
+    <hr>
+    <section id="sponsors" class="mx-auto" style="overflow: hidden;" data-bs-target="#navbar">
+        <!--<div class="col-md-8 col-xl-6 text-center mx-auto" style="margin-top: 50px">
+            <h2><b>Sponsorlarımız</b></h2>
         </div>
-        <div class="row gy-4 row-cols-2 row-cols-md-4 mx-auto" data-aos="zoom-in-up" data-aos-once="true" style="max-width: 985px;">
+        <div class="glider"></div>-->
+        <h2 class="text-center mx-auto mt-4"><b>Sponsorlarımız</b></h2>
+        <div class="slide">
+            <div class="slide-track mt-4"></div>
+        </div>
+    </section>
+    <!-- Start: Team -->
+    <section id="contact" data-bs-target="#navbar">
+        <div class="row g-0 mb-4 mb-lg-5" data-aos="fade" data-aos-once="true">
+            <div class="text-center mx-auto d-flex flex-column" style="margin-top: 50px">
+                <h2><b>Bize Ulaşın</b></h2>
+            </div>
+        </div>
+        <div class="row gy-4 row-cols-2 row-cols-md-4 mx-auto" data-aos="zoom-in-up" data-aos-once="true" style="max-width: 985px; margin-bottom: 60px;">
             <div class="col">
                 <div class="card border-0 shadow-none">
                     <div class="card-body text-center d-flex flex-column align-items-center p-0"><img class="rounded-circle mb-3 fit-cover" width="130" height="130" src="assets/img/tarik_talha_dinc.png">
@@ -95,7 +90,7 @@
             </div>
             <div class="col">
                 <div class="card border-0 shadow-none">
-                    <div class="card-body text-center d-flex flex-column align-items-center p-0"><img class="rounded-circle mb-3 fit-cover" width="130" height="130" src="assets/img/default.png">
+                    <div class="card-body text-center d-flex flex-column align-items-center p-0"><img class="rounded-circle mb-3 fit-cover" width="130" height="130" src="assets/img/sedanur_ayhan.jpg">
                         <h5 class="fw-bold text-primary card-title mb-0"><strong>Sedanur AYHAN</strong></h5>
                         <p class="text-muted card-text mb-2">TechSummit Proje Lideri</p>
                         <ul class="list-inline fs-6 text-muted w-100 mb-0" style="margin-top: -8px;">
@@ -111,7 +106,7 @@
             </div>
             <div class="col">
                 <div class="card border-0 shadow-none">
-                    <div class="card-body text-center d-flex flex-column align-items-center p-0"><img class="rounded-circle mb-3 fit-cover" width="130" height="130" src="assets/img/default.png">
+                    <div class="card-body text-center d-flex flex-column align-items-center p-0"><img class="rounded-circle mb-3 fit-cover" width="130" height="130" src="assets/img/seda_uysal.jpeg">
                         <h5 class="fw-bold text-primary card-title mb-0"><strong>Seda UYSAL</strong></h5>
                         <p class="text-muted card-text mb-2">TechSummit Proje Lideri</p>
                         <ul class="list-inline fs-6 text-muted w-100 mb-0" style="margin-top: -8px;">
@@ -133,8 +128,8 @@
                         <ul class="list-inline fs-6 text-muted w-100 mb-0" style="margin-top: -8px;">
                             <li class="list-inline-item text-center">
                                 <div class="d-flex flex-row align-items-center">
-                                    <i class="icon ion-social-linkedin" onclick="window.open(&quot;https://www.linkedin.com/in/beg%C3%BCm-g%C3%B6kmen-64a330227&quot;, &quot;_blank&quot;)"></i>
-                                    <i class="icon ion-android-mail" onclick="window.open(&quot;mailto:begum.gokmen@leader.compec.org&quot;, &quot;_blank&quot;)"></i>
+                                    <i class="icon ion-social-linkedin" onclick="window.open(&quot;https://www.linkedin.com/in/beg%C3%BCm-g%C3%B6kmen-64a330227&quot;, &quot;_blank&quot;)" style="cursor: pointer;"></i>
+                                    <i class="icon ion-android-mail" onclick="window.open(&quot;mailto:begum.gokmen@leader.compec.org&quot;, &quot;_blank&quot;)" style="cursor: pointer;"></i>
                                 </div>
                             </li>
                         </ul>
@@ -148,6 +143,12 @@
         <div class="container text-white bg-dark py-4 py-lg-5"><img src="assets/img/compec1white.png" style="height: 50px;cursor: pointer;" onclick="window.open(&quot;https://www.compec.org&quot;, &quot;_blank&quot;)">
             <p class="fw-semibold text-white mb-0" id="year" style="margin-top: -2px;cursor: pointer;" onclick="window.open(&quot;https://www.compec.org&quot;, &quot;_blank&quot;)">&nbsp;</p>
         </div>
+        <div class="socials text-white d-flex flex-row justify-content-center bg-dark">            
+            <a href="https://www.linkedin.com/in/bountechsummit" target="_blank"><i class="icon fs-5 ion-social-linkedin"></i></a>
+            <a href="https://instagram.com/bountechsummit" target="_blank"><i class="icon fs-5 ion-social-instagram"></i></a>
+            <a href="https://twitter.com/BounTechsummit" target="_blank"><i class="icon fs-5 ion-social-twitter"></i></a>
+            <a href="https://www.youtube.com/@compecboun" target="_blank"><i class="icon fs-5 ion-social-youtube"></i></a>
+        </div>        
     </footer><!-- End: Footer Dark -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
