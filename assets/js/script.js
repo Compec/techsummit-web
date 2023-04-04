@@ -4,38 +4,57 @@ document.querySelector("#year").innerText = new Date().getFullYear()
 // Auto-fill & GS integration START
 const API_KEY = "AIzaSyATnlWZtGiZ8TbWOCCkFY5LeSC_FYlOOLY"
 const SPREADSHEET_ID = "1RLYg8Z5GLMANyw9oJ6XBUEcT3j4Chr4mFU0RhPGD1S0"
-const DATA_RANGE = "B5:H"
+const DATA_RANGE = ["B5:H","J5:L"]
 function getSheetValues() {
 	gapi.client.init({
         "apiKey": API_KEY,
 		    "discoveryDocs": ["https://sheets.googleapis.com/$discovery/rest?version=v4"]
     }).then(() => {
-		return gapi.client.sheets.spreadsheets.values.get({
+		return gapi.client.sheets.spreadsheets.values.batchGet({
 			spreadsheetId: SPREADSHEET_ID,
-			range: DATA_RANGE
+			ranges: DATA_RANGE
 		})
 	}).then((response) => {
-		    let loadedData = response.result.values
+		    fetchedData = response.result.valueRanges
+        let loadedData = fetchedData[0].values
         let el2Fill = document.querySelectorAll(".event-details")
+        
         for (let i=0; i<loadedData.length; i++) {
             let el2Append = document.createElement("li")
-            el2Append.innerHTML = ` 
-                                  <a data-bs-toggle="modal" data-bs-target="#modal" data-modal-id="${i}">                             
-                                    <span class="event-time">${loadedData[i][5].slice(0,5)}</span> - <span>${loadedData[i][3]} (${loadedData[i][0]})</span>
-                                    <br>
-                                    <span class="event-location">${loadedData[i][4]}</span>
-                                  </a>
+            el2Append.innerHTML = `
+                                  <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-body d-flex align-items-sm-center"><img class="rounded-circle mb-3 fit-cover" width="80" height="80" src=${loadedData[i][2] ? loadedData[i][2] : "assets/img/default.png"}>
+                                          <div>
+                                              <p style="margin-left: 16px;margin-bottom: 2px;margin-top: 4px; font-weight: bold;font-size: 12px;"><span style="color: var(--bs-blue);">${loadedData[i][5]} |</span><span> ${loadedData[i][0]}</span></p>
+                                              <p style="margin-left: 16px;margin-bottom: 6px;">${loadedData[i][3]}</p>
+                                              <p style="margin-left: 16px;font-size: 12px;">${loadedData[i][1]}</p>
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
                                   `
-            el2Append.addEventListener("click", function() {
-              let modal = document.querySelector("#modal .modal-body")
-              let modal_id = this.querySelector("a").getAttribute("data-modal-id")
-              modal.querySelectorAll("p")[0].innerText = loadedData[modal_id][5] + " | " + loadedData[modal_id][4]
-              modal.querySelector("img").src = loadedData[modal_id][2] ? loadedData[modal_id][2] : "assets/img/default.png"
-              modal.querySelector("h4").innerText = loadedData[modal_id][0]
-              modal.querySelectorAll("p")[1].innerText = loadedData[modal_id][3]
-              modal.querySelectorAll("p")[2].innerText = loadedData[modal_id][1]
-            })
             el2Fill[loadedData[i][6] - 1].appendChild(el2Append)
+        }
+        loadedData = fetchedData[1].values
+        let colors = {
+          "Ana Sponsor":"#61de2a",
+          "Platin Sponsor":"#36d0ff",
+          "Altın Sponsor":"#fa921f",
+          "Stant Sponsoru": "#fa4a4a",
+          "Çekiliş Sponsoru": "#fa4a4a"
+        }
+        el2Fill = document.querySelector(".slide-track")
+        for (let i=0; i<loadedData.length; i++) {
+          let el2Append = document.createElement("div")
+          el2Append.class = "d-flex flex-column slide"
+          el2Append.style = "text-align: center; margin: 10px 40px"
+          el2Append.innerHTML = `
+                                <img src=${loadedData[i][1]} class="mb-3 fit-cover" style="width: 130px; border: 5px solid ${colors[loadedData[i][2]]}; border-radius: 50%">
+                                <h5 class="fw-bold text-primary"><strong>${loadedData[i][0]}</strong></h5>
+                                <p class="text-muted" style="margin-top: -7px">${loadedData[i][2]}</p>
+                                `
+          el2Fill.appendChild(el2Append)
         }
 	})
 }
@@ -66,4 +85,6 @@ new JParticles.Wave("#hero-bg", {
 document.querySelector("#hero-bg").style.display = "block"
 document.querySelector("#hero-bg canvas").style.position = "absolute"
 // JParticles.Wave END
+// Glider START
+// Glider END
 gapi.load("client", getSheetValues)
