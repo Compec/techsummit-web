@@ -40,22 +40,22 @@ function getSheetValues() {
         let colors = {
           "Ana Sponsor":"#61de2a",
           "Platin Sponsor":"#36d0ff",
-          "Altın Sponsor":"#fa921f",
-          "Stant Sponsoru": "#fa4a4a",
-          "Çekiliş Sponsoru": "#fa4a4a"
+          "Altın Sponsor":"#fa921f"
         }
         el2Fill = document.querySelector(".slide-track")
-        for (let i=0; i<loadedData.length; i++) {
-          let el2Append = document.createElement("div")
-          el2Append.class = "d-flex flex-column slide"
-          el2Append.style = "text-align: center; margin: 10px 40px"
-          el2Append.innerHTML = `
-                                <img src=${loadedData[i][1]} class="mb-3 fit-cover" style="width: 130px; border: 5px solid ${colors[loadedData[i][2]]}; border-radius: 50%">
-                                <h5 class="fw-bold text-primary"><strong>${loadedData[i][0]}</strong></h5>
-                                <p class="text-muted" style="margin-top: -7px">${loadedData[i][2]}</p>
-                                `
-          el2Fill.appendChild(el2Append)
-        }
+        for (let j=0; j<2; j++){
+          for (let i=0; i<loadedData.length; i++) {
+            let el2Append = document.createElement("div")
+            el2Append.class = "d-flex flex-column slide"
+            el2Append.style = "text-align: center; margin: 10px 40px"
+            el2Append.innerHTML = `
+                                  <img src=${loadedData[i][1]} class="mb-3 fit-cover" style="width: 130px; border: 5px solid ${loadedData[i][2] in colors ? colors[loadedData[i][2]] : "#fa4a4a"}; border-radius: 50%">
+                                  <h5 class="fw-bold text-primary"><strong>${loadedData[i][0]}</strong></h5>
+                                  <p class="text-muted" style="margin-top: -7px">${loadedData[i][2]}</p>
+                                  `
+            el2Fill.appendChild(el2Append)
+          }}
+        el2Fill.style.setProperty("--sponsor-count", loadedData.length)
 	})
 }
 // Auto-fill & GS integration END
@@ -85,6 +85,4 @@ new JParticles.Wave("#hero-bg", {
 document.querySelector("#hero-bg").style.display = "block"
 document.querySelector("#hero-bg canvas").style.position = "absolute"
 // JParticles.Wave END
-// Glider START
-// Glider END
 gapi.load("client", getSheetValues)

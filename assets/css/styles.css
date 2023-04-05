@@ -172,7 +172,7 @@ h3 {
       transform: translateX(0);
   }
   100% {
-      transform: translateX(calc(-250px * 7));
+      transform: translateX(calc(-250px * var(--sponsor-count)));
   }
   }
   #sponsors {
@@ -204,9 +204,8 @@ h3 {
   }
   .slide-track {
       animation: scroll 40s linear infinite;
-      animation-direction: alternate;
       display: flex;
-      width: calc(250px * 14);
+      width: calc(130px * var(--sponsor-count) * 2);
   }
   .slider .slide {
       height: 100px;
