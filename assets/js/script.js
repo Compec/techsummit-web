@@ -49,7 +49,7 @@ function getSheetValues() {
             el2Append.class = "d-flex flex-column slide"
             el2Append.style = "text-align: center; margin: 10px 40px"
             el2Append.innerHTML = `
-                                  <img src=${loadedData[i][1]} class="mb-3 fit-cover" style="width: 130px; border: 5px solid ${loadedData[i][2] in colors ? colors[loadedData[i][2]] : "#fa4a4a"}; border-radius: 50%">
+                                  <img src=${loadedData[i][1]} class="rounded-circle mb-3 fit-cover" style="width: 130px; height: 130px; border: 5px solid ${loadedData[i][2] in colors ? colors[loadedData[i][2]] : "#fa4a4a"}; border-radius: 50%">
                                   <h5 class="fw-bold text-primary"><strong>${loadedData[i][0]}</strong></h5>
                                   <p class="text-muted" style="margin-top: -7px">${loadedData[i][2]}</p>
                                   `

@@ -203,7 +203,7 @@ h3 {
       top: 0;
   }
   .slide-track {
-      animation: scroll 40s linear infinite;
+      animation: scroll 40s linear 0.01s infinite;
       display: flex;
       width: calc(130px * var(--sponsor-count) * 2);
   }
