@@ -24,7 +24,7 @@ function getSheetValues() {
             el2Append.innerHTML = `
                                   <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
-                                      <div class="modal-body d-flex align-items-sm-center"><img class="rounded-circle mb-3 fit-cover" width="80" height="80" src=${loadedData[i][2] ? loadedData[i][2] : "assets/img/default.png"}>
+                                      <div class="modal-body d-flex align-items-sm-center"><img class="rounded-circle mb-3 fit-cover" src=${loadedData[i][2] ? loadedData[i][2] + "=s80-c" : "assets/img/default.png"}>
                                           <div>
                                               <p style="margin-left: 16px;margin-bottom: 2px;margin-top: 4px; font-weight: bold;font-size: 12px;"><span style="color: var(--bs-blue);">${loadedData[i][5]} |</span><span> ${loadedData[i][0]}</span></p>
                                               <p style="margin-left: 16px;margin-bottom: 6px;">${loadedData[i][3]}</p>
@@ -49,14 +49,17 @@ function getSheetValues() {
             el2Append.class = "d-flex flex-column slide"
             el2Append.style = "text-align: center; margin: 10px 40px"
             el2Append.innerHTML = `
-                                  <img src=${loadedData[i][1]} class="rounded-circle mb-3 fit-cover" style="width: 130px; height: 130px; border: 5px solid ${loadedData[i][2] in colors ? colors[loadedData[i][2]] : "#fa4a4a"}; border-radius: 50%">
+                                  <img src=${loadedData[i][1] + "=s130-c"} class="rounded-circle mb-3 fit-cover" style="border: 5px solid ${loadedData[i][2] in colors ? colors[loadedData[i][2]] : "#fa4a4a"}; border-radius: 50%">
                                   <h5 class="fw-bold text-primary"><strong>${loadedData[i][0]}</strong></h5>
                                   <p class="text-muted" style="margin-top: -7px">${loadedData[i][2]}</p>
                                   `
             el2Fill.appendChild(el2Append)
           }}
         el2Fill.style.setProperty("--sponsor-count", loadedData.length)
-	})
+	}).catch((error) => {
+      console.log(error)
+      setTimeout(getSheetValues(), 2000)
+  })
 }
 // Auto-fill & GS integration END
 // JParticles.Wave START
