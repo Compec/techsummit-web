@@ -4,7 +4,7 @@ document.querySelector("#year").innerText = new Date().getFullYear()
 // Auto-fill & GS integration START
 const API_KEY = "AIzaSyATnlWZtGiZ8TbWOCCkFY5LeSC_FYlOOLY"
 const SPREADSHEET_ID = "1RLYg8Z5GLMANyw9oJ6XBUEcT3j4Chr4mFU0RhPGD1S0"
-const DATA_RANGE = ["B5:H","J5:L"]
+const DATA_RANGE = ["B5:H","J5:L","N5:P"]
 function getSheetValues() {
 	gapi.client.init({
         "apiKey": API_KEY,
@@ -21,6 +21,10 @@ function getSheetValues() {
         
         for (let i=0; i<loadedData.length; i++) {
             let el2Append = document.createElement("li")
+            let modalTrigger = new bootstrap.Modal(document.getElementById("panel"))
+            if (loadedData[i][1] == "Panel") {
+              el2Append.addEventListener("click", () => modalTrigger.show())
+            }
             el2Append.innerHTML = `
                                   <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
@@ -56,6 +60,18 @@ function getSheetValues() {
             el2Fill.appendChild(el2Append)
           }}
         el2Fill.style.setProperty("--sponsor-count", loadedData.length)
+
+        loadedData = fetchedData[2].values
+        el2Fill = document.querySelector("#panel .modal-body")
+        for (let i=0; i<loadedData.length; i++) {
+          let el2Append = document.createElement("div")
+          el2Append.innerHTML += `
+                                 <img class="rounded-circle mb-3 fit-cover" src="${loadedData[i][2] + "=s200-c"}">
+                                 <h5 class="fw-bold text-primary"><strong>${loadedData[i][0]}</strong></h5>
+                                 <h5 class="fw-bold text-primary"><strong>${loadedData[i][1]}</strong></h5>
+                                 `
+          el2Fill.appendChild(el2Append)
+        }
 	}).catch((error) => {
       console.log(error)
       setTimeout(getSheetValues(), 2000)
