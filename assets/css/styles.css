@@ -14,6 +14,23 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 
+/* Panel modal */
+#panel .modal-body {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#panel .modal-body div {
+  margin-top: 20px;
+}
+#panel .modal-body img {
+  margin: auto 10px;
+  text-align: center;
+}
+#panel .modal-body h5 {
+  text-align: center;
+  margin: auto;
+}
+
 /* Margin for icons */
 i.icon {
   margin: auto 6px;
