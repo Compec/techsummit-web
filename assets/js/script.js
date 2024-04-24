@@ -4,7 +4,7 @@ document.querySelector("#year").innerText = new Date().getFullYear()
 // Auto-fill & GS integration START
 const API_KEY = "AIzaSyATnlWZtGiZ8TbWOCCkFY5LeSC_FYlOOLY"
 const SPREADSHEET_ID = "1RLYg8Z5GLMANyw9oJ6XBUEcT3j4Chr4mFU0RhPGD1S0"
-const DATA_RANGE = ["B5:H","J5:L","N5:P"]
+const DATA_RANGE = ["B5:H","J5:L"]
 function getSheetValues() {
 	gapi.client.init({
         "apiKey": API_KEY,
@@ -60,7 +60,8 @@ function getSheetValues() {
             el2Fill.appendChild(el2Append)
           }}
         el2Fill.style.setProperty("--sponsor-count", loadedData.length)
-
+        
+        /* Code for panel speakers START
         loadedData = fetchedData[2].values
         el2Fill = document.querySelector("#panel .modal-body")
         for (let i=0; i<loadedData.length; i++) {
@@ -72,6 +73,7 @@ function getSheetValues() {
                                  `
           el2Fill.appendChild(el2Append)
         }
+        Code for panel speakers END */ 
 	}).catch((error) => {
       console.log(error)
       setTimeout(getSheetValues(), 2000)
